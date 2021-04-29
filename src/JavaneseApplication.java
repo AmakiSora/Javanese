@@ -1,6 +1,8 @@
+import Algorithm.FibonacciSequence;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
-        System.out.println("Hello Java!");
+        FibonacciSequence fibonacciSequence = new FibonacciSequence();
+        fibonacciSequence.test();
     }
 }
