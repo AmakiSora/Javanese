@@ -4,16 +4,16 @@ package DataStructure;
  * 链表
  */
 public class LinkedList_ {
-    private Node head;    		//头结点
+    public Node head;    		//头结点
     private int size;			//链表元素个数
 
     public LinkedList_(){//构造函数
         this.head = null;
         this.size = 0;
     }
-    private class Node{//节点
-        private String str;
-        private Node next;
+    public class Node{//节点
+        public String str;
+        public Node next;
         public Node(String str,Node next){
             this.str = str;
             this.next = next;
@@ -67,7 +67,9 @@ public class LinkedList_ {
                 this.size++;
                 break;
             }
-            else cur = cur.next;
+            else {
+                cur = cur.next;
+            }
         }
         this.head = dummy.next;
     }
@@ -133,18 +135,34 @@ public class LinkedList_ {
             if(cur.str.equals(str)){
                 return true;
             }
-            else cur = cur.next;
+            else {
+                cur = cur.next;
+            }
         }
         return false;
     }
-    private void show(){//遍历输出
+    public Node getNode(int n){//返回链表的一个节点
+        Node node = this.head;
+        for (int i = 0; i < n; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+    public void setNode(Node o,int n){//设置链表n个位置的节点的下一个节点(bug:size未考虑)
+        Node node = this.head;
+        for (int i = 0; i < n; i++) {
+            node = node.next;
+        }
+        node.next = o;
+    }
+    public void show(){//遍历输出
         if (head==null){
             System.out.println("无链表");
             return;
         }
         Node n = head;
         System.out.println(n.str);
-        for (int i = 1; i < size; i++) {
+        while (n.next!=null){
             n = n.next;
             System.out.println(n.str);
         }
