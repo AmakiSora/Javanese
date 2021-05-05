@@ -11,7 +11,7 @@ public class LinkedList_ {
         this.head = null;
         this.size = 0;
     }
-    public class Node{//节点
+    public static class Node{//节点
         public String str;
         public Node next;
         public Node(String str,Node next){
