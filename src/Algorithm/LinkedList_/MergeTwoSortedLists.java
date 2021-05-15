@@ -1,4 +1,4 @@
-package Algorithm;
+package Algorithm.LinkedList_;
 
 import DataStructure.LinkedList_;
 
@@ -6,7 +6,8 @@ import DataStructure.LinkedList_;
  * 合并两个有序链表
  */
 public class MergeTwoSortedLists {
-    public LinkedList_.Node mergingMethod(LinkedList_.Node n1,LinkedList_.Node n2){//执行后会破坏两个链表
+    //归并法
+    public LinkedList_.Node mergingMethod(LinkedList_.Node n1,LinkedList_.Node n2){
         LinkedList_.Node head = new LinkedList_.Node(-1);
         LinkedList_.Node node = head;
         while (n1 != null && n2 != null){
@@ -23,6 +24,7 @@ public class MergeTwoSortedLists {
         if (n2 == null) node.next = n1;
         return head.next;
     }
+    //递归法
     public LinkedList_.Node recursion(LinkedList_.Node n1,LinkedList_.Node n2){
         if (n1 == null) return n2;
         if (n2 == null) return n1;
@@ -35,30 +37,18 @@ public class MergeTwoSortedLists {
         }
     }
     public void test(){
-        LinkedList_ l1 = new LinkedList_();
-        l1.addLast(1);
-        l1.addLast(2);
-        l1.addLast(4);
+        LinkedList_ l1 = new LinkedList_(1,2,4);
         System.out.print("输入l1: ");
         l1.show();
-        LinkedList_ l2 = new LinkedList_();
-        l2.addLast(1);
-        l2.addLast(3);
-        l2.addLast(4);
+        LinkedList_ l2 = new LinkedList_(1,3,4);
         System.out.print("输入l2: ");
         l2.show();
         System.out.print("归并法: ");
         LinkedList_ l3 = new LinkedList_(mergingMethod(l1.getHead(), l2.getHead()));
         l3.show();
-
-        l1 = new LinkedList_();
-        l1.addLast(1);
-        l1.addLast(2);
-        l1.addLast(4);
-        l2 = new LinkedList_();
-        l2.addLast(1);
-        l2.addLast(3);
-        l2.addLast(4);
+        //执行后会破坏两个链表,需重新生成
+        l1 = new LinkedList_(1,2,4);
+        l2 = new LinkedList_(1,3,4);
         System.out.print("递归法: ");
         LinkedList_ l4 = new LinkedList_(recursion(l1.getHead(),l2.getHead()));
         l4.show();

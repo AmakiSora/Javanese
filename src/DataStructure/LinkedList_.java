@@ -16,10 +16,10 @@ public class LinkedList_ {
 //        this.size = 0;
         updateSize();
     }
-    public LinkedList_(String [] a){//有头结点的构造函数
-        this.head = head;
-//        this.size = 0;
-        updateSize();
+    public LinkedList_(Object... obj){//多结点构造函数
+        for (Object o : obj) {
+            addLast(o);
+        }
     }
     public static class Node{//节点
         public Object str;
