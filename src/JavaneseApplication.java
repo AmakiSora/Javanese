@@ -1,8 +1,5 @@
 import Algorithm.FibonacciSequence;
-import Algorithm.LinkedList_.IntersectionOfTwoLinkedLists;
-import Algorithm.LinkedList_.MergeTwoSortedLists;
-import Algorithm.LinkedList_.RemoveDuplicatesFromSortedList;
-import Algorithm.LinkedList_.ReverseLinkedList;
+import Algorithm.LinkedList_.*;
 import Algorithm.TheNumberOf1InBinarySystem;
 import DataStructure.LinkedList_;
 
@@ -14,6 +11,7 @@ public class JavaneseApplication {
 //        new IntersectionOfTwoLinkedLists().test();
 //        new ReverseLinkedList().test();
 //        new MergeTwoSortedLists().test();
-        new RemoveDuplicatesFromSortedList().test();
+//        new RemoveDuplicatesFromSortedList().test();
+        new RemoveNthNodeFromEndofList().test();
     }
 }
