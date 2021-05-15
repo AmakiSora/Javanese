@@ -4,36 +4,49 @@ package DataStructure;
  * 链表
  */
 public class LinkedList_ {
-    public Node head;    		//头结点
+    private Node head;    		//头结点
     private int size;			//链表元素个数
 
     public LinkedList_(){//构造函数
         this.head = null;
         this.size = 0;
     }
+    public LinkedList_(Node head){//有头结点的构造函数
+        this.head = head;
+//        this.size = 0;
+        updateSize();
+    }
+    public LinkedList_(String [] a){//有头结点的构造函数
+        this.head = head;
+//        this.size = 0;
+        updateSize();
+    }
     public static class Node{//节点
-        public String str;
+        public Object str;
         public Node next;
-        public Node(String str,Node next){
+        public Node(Object str,Node next){
             this.str = str;
             this.next = next;
         }
-        public Node(String str){
+        public Node(Object str){
             this(str,null);
         }
+        public Node() {
+            this.str = null;
+            this.next = null;
+        }
     }
-    public void addFirst(String str){//链表头部添加元素
+    public void addFirst(Object str){//链表头部添加元素
         Node node = new Node(str);	//节点对象
         node.next = this.head;
         this.head = node;
         //this.head = new Node(e,head);等价上述代码
         this.size++;
     }
-    public void addLast(String str){//向链表尾部插入元素
+    public void addLast(Object str){//向链表尾部插入元素
         this.add(str, this.size);
     }
-
-    public void add(String str,int index){//向链表中间插入元素
+    public void add(Object str,int index){//向链表中间插入元素
         if (index <0 || index >size){
             throw new IllegalArgumentException("链表长度出错");
         }
@@ -53,7 +66,7 @@ public class LinkedList_ {
         preNode.next = node;
         this.size++;
     }
-    public void insert(String str,String des){//在某个元素前面插入,如果没有就不插入
+    public void insert(Object str,String des){//在某个元素前面插入,如果没有就不插入
         //构造虚拟头结点，并且下一个结点指向head
         Node dummy = new Node(null,this.head);
         //构造要插入的结点
@@ -73,7 +86,7 @@ public class LinkedList_ {
         }
         this.head = dummy.next;
     }
-    public void remove(String str){//删除链表元素
+    public void remove(Object str){//删除链表元素
         int s = size;
         if(head == null){
             System.out.println("无元素可删除");
@@ -98,7 +111,7 @@ public class LinkedList_ {
             System.out.println(str+"不存在");
         }
     }
-    public String removeFirst(){//删除链表第一个元素
+    public Object removeFirst(){//删除链表第一个元素
         if(this.head == null){
             System.out.println("无元素可删除");
             return null;
@@ -109,8 +122,7 @@ public class LinkedList_ {
         this.size--;
         return delNode.str;
     }
-
-    public String removeLast(){//删除链表的最后一个元素
+    public Object removeLast(){//删除链表的最后一个元素
         if(this.head == null){
             System.out.println("无元素可删除");
             return null;
@@ -129,7 +141,7 @@ public class LinkedList_ {
         this.size--;
         return cur.str;
     }
-    public boolean contains(String str){//链表中是否包含某个元素
+    public boolean contains(Object str){//链表中是否包含某个元素
         Node cur = this.head;
         while(cur != null){
             if(cur.str.equals(str)){
@@ -141,6 +153,9 @@ public class LinkedList_ {
         }
         return false;
     }
+    public Node getHead(){//获取头结点
+        return this.head;
+    }
     public Node getNode(int n){//返回链表的一个节点
         Node node = this.head;
         for (int i = 0; i < n; i++) {
@@ -148,12 +163,32 @@ public class LinkedList_ {
         }
         return node;
     }
-    public void setNode(Node o,int n){//设置链表n个位置的节点的下一个节点(bug:size未考虑)
+    public int getSize() {
+        return size;
+    }
+    public void setHead(Node head) {//设置头结点
+        this.head = head;
+        updateSize();
+    }
+    public void setNode(Node o, int n){//设置链表位置为n的节点的下一个节点
         Node node = this.head;
         for (int i = 0; i < n; i++) {
             node = node.next;
         }
         node.next = o;
+        updateSize();
+    }
+    public void updateSize(){//更新链表长度
+        Node s = head;
+        int sum = 1;
+        if (s == null){
+            return;
+        }
+        while(s.next != null){
+            sum++;
+            s = s.next;
+        }
+        this.size = sum;
     }
     public void show(){//遍历输出
         if (head==null){
@@ -161,19 +196,25 @@ public class LinkedList_ {
             return;
         }
         Node n = head;
-        System.out.println(n.str);
+        System.out.print(n.str);
         while (n.next!=null){
             n = n.next;
-            System.out.println(n.str);
+                System.out.print( " -> " + n.str);
         }
+        System.out.println();
     };
     public void test(){//测试
-        show();
-        addFirst("11");
-        addLast("222");
-        addLast("3333");
-        addLast("44444");
-        addLast("555555");
-        show();
+        LinkedList_ l1 = new LinkedList_();
+        LinkedList_ l2 = new LinkedList_();
+        l1.addLast(1);
+        l1.addLast(2);
+        l1.addLast(3);
+        System.out.println(l1.size);
+        l2.addLast(4);
+        l2.addLast(5);
+        l2.addLast(6);
+        l1.setNode(l2.head,2);
+        System.out.println(l1.size);
+        l1.show();
     }
 }

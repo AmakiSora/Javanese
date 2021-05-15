@@ -28,7 +28,7 @@ public class IntersectionOfTwoLinkedLists {
         l2.addLast("b3");
         l2.setNode(l1.getNode(2),2);
 //        l2.show();
-        System.out.println(getIntersectionNode(l1.head, l2.head));
-//        System.out.println(getIntersectionNode(l1.head, l2.head).str);//不存在交点会报错
+        System.out.println(getIntersectionNode(l1.getHead(), l2.getHead()));
+        System.out.println(getIntersectionNode(l1.getHead(), l2.getHead()).str);//不存在交点会报错
     }
 }

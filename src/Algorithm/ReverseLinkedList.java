@@ -33,31 +33,25 @@ public class ReverseLinkedList {
         l1.addLast("3");
         l1.addLast("4");
         l1.addLast("5");
+        System.out.println("----------------------------------------");
         l1.show();
         System.out.println("递归反转");
-        LinkedList_.Node reNode1 = recursion(l1.head);
-        System.out.println(reNode1.str);
-        while (reNode1.next!=null){
-            System.out.println(reNode1.next.str);
-            reNode1 = reNode1.next;
-        }
-        System.out.println("递归完成");
-        System.out.println("----------------------------------------");
-        LinkedList_ l2 = new LinkedList_();
-        l2.addLast("1");
-        l2.addLast("2");
-        l2.addLast("3");
-        l2.addLast("4");
-        l2.addLast("5");
+        LinkedList_.Node reNode1 = recursion(l1.getHead());
+        LinkedList_ l2 = new LinkedList_(reNode1);
         l2.show();
+        System.out.println("----------------------------------------");
+        LinkedList_ l3 = new LinkedList_();
+        l3.addLast("1");
+        l3.addLast("2");
+        l3.addLast("3");
+        l3.addLast("4");
+        l3.addLast("5");
+        l3.show();
         System.out.println("头插法");
-        LinkedList_.Node reNode2 = headInsertion(l2.head);
-        System.out.println(reNode2.str);
-        while (reNode2.next!=null){
-            System.out.println(reNode2.next.str);
-            reNode2 = reNode2.next;
-        }
-        System.out.println("头插完成");
+        LinkedList_.Node reNode2 = headInsertion(l3.getHead());
+        LinkedList_ l4 = new LinkedList_(reNode2);
+        l4.show();
+        System.out.println("----------------------------------------");
 
     }
 }
