@@ -7,7 +7,7 @@ import java.util.Queue;
  * 二叉树
  */
 public class BinaryTree_ {
-    private Node root;
+    public Node root;
     public BinaryTree_(){
         this.root = new Node();
     }
@@ -16,8 +16,8 @@ public class BinaryTree_ {
     }
     public static class Node{
         Object val;
-        Node leftNode;
-        Node rightNode;
+        public Node leftNode;
+        public Node rightNode;
         public Node(){
             this.val = null;
             this.leftNode = null;
@@ -90,7 +90,10 @@ public class BinaryTree_ {
             }
         }
     }
-    public void show(){ show(root); }
+    public void show(){ //展示树的形状
+        if (root.val == null) System.out.println("树不存在");
+        else show(root);
+    }
     public void show(Node node){
         Queue<Object> qn = new LinkedList<>();
         qn.add(node);
@@ -122,7 +125,16 @@ public class BinaryTree_ {
             }
         }
     }
-    public void test(){
+    public void maxDepth(){
+        int m = maxDepth(root);
+        if (m == 0) System.out.println("树不存在！");
+        else System.out.println("树的高度为:" + m);
+    }
+    public int maxDepth(Node root) {//树的层数(高度)
+        if (root == null) return 0;
+        return Math.max(maxDepth(root.leftNode), maxDepth(root.rightNode)) + 1;
+    }
+    public void createTestTree(){//创建出一个用于测试的树;
         root.val = 1;
         root.addLeft(2);
         root.addRight(3);
@@ -138,6 +150,9 @@ public class BinaryTree_ {
         root.rightNode.leftNode.addRight(3);
         root.rightNode.rightNode.addLeft(4);
         root.rightNode.rightNode.addRight(5);
+    }
+    public void test(){
+        createTestTree();
         System.out.print("前序遍历：");
         preorder();
         System.out.println();
@@ -152,6 +167,7 @@ public class BinaryTree_ {
         System.out.println();
         System.out.print("树图：");
         show();
+        maxDepth();
     }
 
 }
