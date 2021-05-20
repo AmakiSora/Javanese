@@ -1,5 +1,6 @@
 package DataStructure;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -14,8 +15,29 @@ public class BinaryTree_ {
     public BinaryTree_(Object o){
         this.root = new Node(o);
     }
+    public BinaryTree_(Object...obj){//根据层序遍历生成二叉树
+        this.root = new Node(obj[0]);
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        int i = 1;
+        while(!queue.isEmpty()){
+            Node node = queue.poll();
+            if (i>=obj.length) break;
+            if (obj[i]!=null) {
+                node.addLeft(obj[i]);
+                queue.add(node.leftNode);
+            }
+            i++;
+            if (i>=obj.length) break;
+            if (obj[i]!=null) {
+                node.addRight(obj[i]);
+                queue.add(node.rightNode);
+            }
+            i++;
+        }
+    }
     public static class Node{
-        Object val;
+        public Object val;
         public Node leftNode;
         public Node rightNode;
         public Node(){

@@ -14,8 +14,7 @@ public class InvertBinaryTree {
         return node;
     }
     public void test(){
-        BinaryTree_ tree = new BinaryTree_();
-        tree.createTestTree();
+        BinaryTree_ tree = new BinaryTree_(1,2,3,4,5,6,7,8,9,0,1,2,3,4,5);
         System.out.print("翻转前:");
         tree.show();
         invert(tree.root);
