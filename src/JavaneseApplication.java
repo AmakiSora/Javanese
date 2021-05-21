@@ -1,6 +1,7 @@
 import Algorithm.FibonacciSequence;
 import Algorithm.LinkedList_.*;
 import Algorithm.TheNumberOf1InBinarySystem;
+import Algorithm.Tree_.DiameterOfBinaryTree;
 import Algorithm.Tree_.InvertBinaryTree;
 import Algorithm.Tree_.IsBalancedBinaryTree;
 import Algorithm.Tree_.IsSymmetricTree;
@@ -20,6 +21,7 @@ public class JavaneseApplication {
 //        new BinaryTree_().test();
 //        new IsBalancedBinaryTree().test();
 //        new InvertBinaryTree().test();
-        new IsSymmetricTree().test();
+//        new IsSymmetricTree().test();
+        new DiameterOfBinaryTree().test();
         }
 }
