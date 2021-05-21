@@ -1,10 +1,7 @@
 import Algorithm.FibonacciSequence;
 import Algorithm.LinkedList_.*;
 import Algorithm.TheNumberOf1InBinarySystem;
-import Algorithm.Tree_.DiameterOfBinaryTree;
-import Algorithm.Tree_.InvertBinaryTree;
-import Algorithm.Tree_.IsBalancedBinaryTree;
-import Algorithm.Tree_.IsSymmetricTree;
+import Algorithm.Tree_.*;
 import DataStructure.BinaryTree_;
 import DataStructure.LinkedList_;
 
@@ -22,6 +19,7 @@ public class JavaneseApplication {
 //        new IsBalancedBinaryTree().test();
 //        new InvertBinaryTree().test();
 //        new IsSymmetricTree().test();
-        new DiameterOfBinaryTree().test();
+//        new DiameterOfBinaryTree().test();
+        new MergeTwoBinaryTrees().test();
         }
 }
