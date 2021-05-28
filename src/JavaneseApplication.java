@@ -1,9 +1,4 @@
-import Algorithm.FibonacciSequence;
-import Algorithm.LinkedList_.*;
-import Algorithm.TheNumberOf1InBinarySystem;
 import Algorithm.Tree_.*;
-import DataStructure.BinaryTree_;
-import DataStructure.LinkedList_;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -20,6 +15,7 @@ public class JavaneseApplication {
 //        new InvertBinaryTree().test();
 //        new IsSymmetricTree().test();
 //        new DiameterOfBinaryTree().test();
-        new MergeTwoBinaryTrees().test();
+//        new MergeTwoBinaryTrees().test();
+        new SumOfLeftLeaves().test();
         }
 }
