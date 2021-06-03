@@ -1,4 +1,4 @@
-import algorithm.sort.BubbleSort;
+import algorithm.sort.SelectionSort;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class JavaneseApplication {
 //        new DiameterOfBinaryTree().test();
 //        new MergeTwoBinaryTrees().test();
 //        new SumOfLeftLeaves().test();
-        new BubbleSort().test();
+//        new BubbleSort().test();
+        new SelectionSort().test();
     }
 }
