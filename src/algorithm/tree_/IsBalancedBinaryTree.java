@@ -1,6 +1,6 @@
-package Algorithm.Tree_;
+package algorithm.tree_;
 
-import DataStructure.BinaryTree_;
+import datastructure.BinaryTree_;
 
 /**
  * 判断是否为平衡二叉树

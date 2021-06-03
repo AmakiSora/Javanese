@@ -1,4 +1,4 @@
-package Algorithm.Others;
+package algorithm.others;
 
 /**
  * 二进制中1的个数

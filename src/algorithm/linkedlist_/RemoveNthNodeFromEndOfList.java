@@ -1,11 +1,11 @@
-package Algorithm.LinkedList_;
+package algorithm.linkedlist_;
 
-import DataStructure.LinkedList_;
+import datastructure.LinkedList_;
 
 /**
  * 删除链表的倒数第 n 个节点
  */
-public class RemoveNthNodeFromEndofList {
+public class RemoveNthNodeFromEndOfList {
     //计算出位置再删除
     public LinkedList_.Node computingMethod(LinkedList_.Node head,int n){
         LinkedList_.Node node = head;
@@ -33,7 +33,7 @@ public class RemoveNthNodeFromEndofList {
         while (n-- > 0) {
             fast = fast.next;
         }
-        if (fast == null) return head.next;
+        if (fast == null && head != null) return head.next;
         LinkedList_.Node slow = head;
         while (fast.next != null) {
             fast = fast.next;

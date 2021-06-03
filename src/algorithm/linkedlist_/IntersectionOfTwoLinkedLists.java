@@ -1,6 +1,6 @@
-package Algorithm.LinkedList_;
+package algorithm.linkedlist_;
 
-import DataStructure.LinkedList_;
+import datastructure.LinkedList_;
 
 /**
  * 找出两个链表的交点

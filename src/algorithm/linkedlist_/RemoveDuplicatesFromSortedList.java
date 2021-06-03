@@ -1,6 +1,6 @@
-package Algorithm.LinkedList_;
+package algorithm.linkedlist_;
 
-import DataStructure.LinkedList_;
+import datastructure.LinkedList_;
 
 /**
  * 从有序链表中删除重复节点

@@ -1,6 +1,6 @@
-package Algorithm.Tree_;
+package algorithm.tree_;
 
-import DataStructure.BinaryTree_;
+import datastructure.BinaryTree_;
 
 /**
  * 求二叉树的最长路径

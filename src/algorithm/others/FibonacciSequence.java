@@ -1,4 +1,4 @@
-package Algorithm.Others;
+package algorithm.others;
 
 import java.util.Arrays;
 

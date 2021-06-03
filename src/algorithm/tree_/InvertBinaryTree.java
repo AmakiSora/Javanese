@@ -1,6 +1,6 @@
-package Algorithm.Tree_;
+package algorithm.tree_;
 
-import DataStructure.BinaryTree_;
+import datastructure.BinaryTree_;
 
 /**
  * 翻转二叉树

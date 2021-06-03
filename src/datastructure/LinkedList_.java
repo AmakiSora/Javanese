@@ -1,4 +1,4 @@
-package DataStructure;
+package datastructure;
 
 /**
  * 链表
