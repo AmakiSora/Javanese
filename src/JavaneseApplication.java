@@ -1,5 +1,4 @@
-import algorithm.sort.InsertionSort;
-import algorithm.sort.SelectionSort;
+import algorithm.sort.ShellSort;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -19,6 +18,8 @@ public class JavaneseApplication {
 //        new MergeTwoBinaryTrees().test();
 //        new SumOfLeftLeaves().test();
 //        new BubbleSort().test();
-        new InsertionSort().test();
+//        new SelectionSort().test();
+//        new InsertionSort().test();
+        new ShellSort().test();
     }
 }
