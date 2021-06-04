@@ -1,3 +1,4 @@
+import algorithm.sort.MergeSort;
 import algorithm.sort.ShellSort;
 
 public class JavaneseApplication {
@@ -20,6 +21,7 @@ public class JavaneseApplication {
 //        new BubbleSort().test();
 //        new SelectionSort().test();
 //        new InsertionSort().test();
-        new ShellSort().test();
+//        new ShellSort().test();
+        new MergeSort().test();
     }
 }
