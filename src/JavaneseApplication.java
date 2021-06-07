@@ -1,4 +1,4 @@
-import datastructure.Heap_;
+import algorithm.sort.HeapSort;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -23,6 +23,7 @@ public class JavaneseApplication {
 //        new ShellSort().test();
 //        new MergeSort().test();
 //        new QuickSort().test();
-        new Heap_().test();
+//        new Heap_().test();
+        new HeapSort().test();
     }
 }

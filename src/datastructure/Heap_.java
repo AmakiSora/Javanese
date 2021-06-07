@@ -28,15 +28,15 @@ public class Heap_ {
     }
     private void buildMaxHeap() {//最大堆
         for (int i = (int) Math.floor(size / 2); i >= 0; i--) {
-            maxHeapify(i);
+            maxHeapify(i,size);
         }
     }
     private void buildMinHeap() {//最小堆
         for (int i = (int) Math.floor(size / 2); i >= 0; i--) {
-            minHeapify(i);
+            minHeapify(i,size);
         }
     }
-    private void maxHeapify(int i) {
+    public void maxHeapify(int i,int size) {
         int left = 2 * i + 1;
         int right = 2 * i + 2;
         int max = i;
@@ -46,10 +46,10 @@ public class Heap_ {
             max = right;
         if (max != i) {
             exchange(i, max);
-            maxHeapify(max);
+            maxHeapify(max,size);
         }
     }
-    private void minHeapify(int i) {
+    public void minHeapify(int i,int size) {
         int left = 2 * i + 1;
         int right = 2 * i + 2;
         int min = i;
@@ -59,10 +59,10 @@ public class Heap_ {
             min = right;
         if (min != i) {
             exchange(i, min);
-            minHeapify(min);
+            minHeapify(min,size);
         }
     }
-    private void exchange(int a, int b){
+    public void exchange(int a, int b){
         int c = heap[a];
         heap[a] = heap[b];
         heap[b] = c;
