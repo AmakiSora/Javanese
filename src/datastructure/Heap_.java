@@ -9,7 +9,7 @@ import java.util.Random;
 public class Heap_ {
     private final int[] heap;
     private final int size;
-    public Heap_(int...a){//默认最大堆
+    public Heap_(int...a){//默认大顶堆
         size = a.length;
         heap = a;
         buildMaxHeap();
@@ -17,8 +17,8 @@ public class Heap_ {
     public Heap_(Boolean b,int...a){
         size = a.length;
         heap = a;
-        if (b) buildMaxHeap();//true为最大堆
-        else buildMinHeap();//false为最小堆
+        if (b) buildMaxHeap();//true为大顶堆
+        else buildMinHeap();//false为小顶堆
     }
     public void show(){
         System.out.println(Arrays.toString(heap));
@@ -26,12 +26,12 @@ public class Heap_ {
     public int[] getHeap(){
         return heap;
     }
-    private void buildMaxHeap() {//最大堆
+    private void buildMaxHeap() {//大顶堆
         for (int i = (int) Math.floor(size / 2); i >= 0; i--) {
             maxHeapify(i,size);
         }
     }
-    private void buildMinHeap() {//最小堆
+    private void buildMinHeap() {//小顶堆
         for (int i = (int) Math.floor(size / 2); i >= 0; i--) {
             minHeapify(i,size);
         }

@@ -1,4 +1,4 @@
-import algorithm.sort.HeapSort;
+import algorithm.sort.CountingSort;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -24,6 +24,7 @@ public class JavaneseApplication {
 //        new MergeSort().test();
 //        new QuickSort().test();
 //        new Heap_().test();
-        new HeapSort().test();
+//        new HeapSort().test();
+        new CountingSort().test();
     }
 }
