@@ -1,6 +1,4 @@
-import algorithm.sort.MergeSort;
-import algorithm.sort.QuickSort;
-import algorithm.sort.ShellSort;
+import datastructure.Heap_;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -24,6 +22,7 @@ public class JavaneseApplication {
 //        new InsertionSort().test();
 //        new ShellSort().test();
 //        new MergeSort().test();
-        new QuickSort().test();
+//        new QuickSort().test();
+        new Heap_().test();
     }
 }
