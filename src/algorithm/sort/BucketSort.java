@@ -25,7 +25,7 @@ public class BucketSort {
         // 利用映射函数将数据分配到各个桶中
         for (int j : a) {
             int index = (int) Math.floor((j - minValue) / bucketSize);
-            buckets[index] = aAppend(buckets[index], j);
+            buckets[index] = arrayAppend(buckets[index], j);
         }
         int aIndex = 0;
         for (int[] bucket : buckets) {
@@ -40,7 +40,7 @@ public class BucketSort {
         }
         return a;
     }
-    private int[] aAppend(int[] a, int value) {//自动扩容，并保存数据
+    private int[] arrayAppend(int[] a, int value) {//自动扩容，并保存数据
         a = Arrays.copyOf(a, a.length + 1);
         a[a.length - 1] = value;
         return a;
