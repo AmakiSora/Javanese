@@ -1,3 +1,4 @@
+import algorithm.sort.BucketSort;
 import algorithm.sort.CountingSort;
 
 public class JavaneseApplication {
@@ -25,6 +26,7 @@ public class JavaneseApplication {
 //        new QuickSort().test();
 //        new Heap_().test();
 //        new HeapSort().test();
-        new CountingSort().test();
+//        new CountingSort().test();
+        new BucketSort().test();
     }
 }
