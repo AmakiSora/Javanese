@@ -1,4 +1,4 @@
-package designPattern.singleton;
+package designpattern.singleton;
 
 /**
  * 枚举(线程安全)

@@ -1,4 +1,4 @@
-import designPattern.simplefactory.TestSimpleFactory;
+import designpattern.proxypattern.ProxyPattern;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -28,6 +28,7 @@ public class JavaneseApplication {
 //        new CountingSort().test();
 //        new BucketSort().test();
 //        new RadixSort().test();
-        new TestSimpleFactory().test();
+//        new SimpleFactory().test();
+        new ProxyPattern().test();
     }
 }

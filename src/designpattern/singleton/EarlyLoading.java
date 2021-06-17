@@ -1,4 +1,4 @@
-package designPattern.singleton;
+package designpattern.singleton;
 
 /**
  * 饿汉式(线程安全)

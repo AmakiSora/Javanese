@@ -1,4 +1,4 @@
-package designPattern.simplefactory;
+package designpattern.simplefactory;
 
 /**
  * 简单工厂模式

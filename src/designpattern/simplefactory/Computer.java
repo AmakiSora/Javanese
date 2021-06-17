@@ -1,4 +1,4 @@
-package designPattern.simplefactory;
+package designpattern.simplefactory;
 
 public abstract class Computer {
     public abstract String getRAM();

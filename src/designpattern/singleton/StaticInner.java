@@ -1,4 +1,4 @@
-package designPattern.singleton;
+package designpattern.singleton;
 
 /**
  * 静态内部类(线程安全)
