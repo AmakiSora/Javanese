@@ -1,4 +1,4 @@
-
+import designPattern.simplefactory.TestSimpleFactory;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -28,5 +28,6 @@ public class JavaneseApplication {
 //        new CountingSort().test();
 //        new BucketSort().test();
 //        new RadixSort().test();
+        new TestSimpleFactory().test();
     }
 }
