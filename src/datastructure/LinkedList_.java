@@ -202,7 +202,7 @@ public class LinkedList_ {
                 System.out.print( " -> " + n.str);
         }
         System.out.println();
-    };
+    }
     public void test(){//测试
         LinkedList_ l1 = new LinkedList_();
         LinkedList_ l2 = new LinkedList_();

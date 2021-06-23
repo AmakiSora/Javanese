@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class BubbleSort {
     public int[] smallToLarge(int[] a){
-        boolean isChange = false;
+        boolean isChange;
         for (int i = 1; i < a.length; i++) {
             isChange = false;
             for (int j = 0; j < a.length - i; j++) {

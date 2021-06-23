@@ -1,4 +1,7 @@
-import designpattern.proxypattern.ProxyPattern;
+import algorithm.tree_.IsValidBinarySearchTree;
+import com.sun.source.tree.Tree;
+
+import javax.swing.tree.TreeNode;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -29,6 +32,7 @@ public class JavaneseApplication {
 //        new BucketSort().test();
 //        new RadixSort().test();
 //        new SimpleFactory().test();
-        new ProxyPattern().test();
+//        new ProxyPattern().test();
+        new IsValidBinarySearchTree().test();
     }
 }
