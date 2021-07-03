@@ -1,7 +1,5 @@
 import algorithm.tree_.IsValidBinarySearchTree;
-import com.sun.source.tree.Tree;
-
-import javax.swing.tree.TreeNode;
+import designpattern.strategy.Strategy;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -33,6 +31,7 @@ public class JavaneseApplication {
 //        new RadixSort().test();
 //        new SimpleFactory().test();
 //        new ProxyPattern().test();
-        new IsValidBinarySearchTree().test();
+//        new IsValidBinarySearchTree().test();
+        new Strategy().test();
     }
 }
