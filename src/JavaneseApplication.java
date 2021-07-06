@@ -1,5 +1,4 @@
-import algorithm.tree_.IsValidBinarySearchTree;
-import designpattern.strategy.Strategy;
+import designpattern.prototype.Prototype;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -32,6 +31,7 @@ public class JavaneseApplication {
 //        new SimpleFactory().test();
 //        new ProxyPattern().test();
 //        new IsValidBinarySearchTree().test();
-        new Strategy().test();
+//        new Strategy().test();
+        new Prototype().test();
     }
 }
