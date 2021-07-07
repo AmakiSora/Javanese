@@ -1,4 +1,4 @@
-import designpattern.flyweight.Flyweight;
+import concurrent.UserThread_VS_DaemonThead;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -33,6 +33,7 @@ public class JavaneseApplication {
 //        new IsValidBinarySearchTree().test();
 //        new Strategy().test();
 //        new Prototype().test();
-        new Flyweight().test();
+//        new Flyweight().test();
+        new UserThread_VS_DaemonThead().test();
     }
 }
