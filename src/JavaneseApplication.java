@@ -1,4 +1,4 @@
-import designpattern.prototype.Prototype;
+import designpattern.flyweight.Flyweight;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -32,6 +32,7 @@ public class JavaneseApplication {
 //        new ProxyPattern().test();
 //        new IsValidBinarySearchTree().test();
 //        new Strategy().test();
-        new Prototype().test();
+//        new Prototype().test();
+        new Flyweight().test();
     }
 }
