@@ -1,4 +1,4 @@
-import concurrent.Synchronized;
+import concurrent.ReentrantLock_;
 
 public class JavaneseApplication {
     public static void main(String[] args) {
@@ -35,6 +35,7 @@ public class JavaneseApplication {
 //        new Prototype().test();
 //        new Flyweight().test();
 //        new UserThread_VS_DaemonThead().test();
-        new Synchronized().test();
+//        new Synchronized().test();
+        new ReentrantLock_().test();
     }
 }
