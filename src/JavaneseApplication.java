@@ -1,7 +1,7 @@
-import concurrent.ReentrantLock_;
+import concurrent.SpuriousWakeup;
 
 public class JavaneseApplication {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 //        new FibonacciSequence().test();
 //        new TheNumberOf1InBinarySystem().test();
 //        new LinkedList_().test();
@@ -36,6 +36,7 @@ public class JavaneseApplication {
 //        new Flyweight().test();
 //        new UserThread_VS_DaemonThead().test();
 //        new Synchronized().test();
-        new ReentrantLock_().test();
+//        new ReentrantLock_().test();
+        new SpuriousWakeup().test();
     }
 }
