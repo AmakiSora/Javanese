@@ -1,5 +1,4 @@
-import concurrent.SpuriousWakeup;
-import concurrent.Volatile;
+import concurrent.InstructionReordering;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -39,6 +38,7 @@ public class JavaneseApplication {
 //        new Synchronized().test();
 //        new ReentrantLock_().test();
 //        new SpuriousWakeup().test();
-        new Volatile().test();
+//        new Volatile_Visibility().test();
+        new InstructionReordering().test();
     }
 }
