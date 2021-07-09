@@ -1,4 +1,5 @@
 import concurrent.SpuriousWakeup;
+import concurrent.Volatile;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -37,6 +38,7 @@ public class JavaneseApplication {
 //        new UserThread_VS_DaemonThead().test();
 //        new Synchronized().test();
 //        new ReentrantLock_().test();
-        new SpuriousWakeup().test();
+//        new SpuriousWakeup().test();
+        new Volatile().test();
     }
 }
