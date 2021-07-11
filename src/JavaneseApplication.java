@@ -1,4 +1,4 @@
-import concurrent.Deadlock;
+import concurrent.Runnable_VS_Callable;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -40,6 +40,7 @@ public class JavaneseApplication {
 //        new SpuriousWakeup().test();
 //        new Volatile_Visibility().test();
 //        new InstructionReordering().test();
-        new Deadlock().test();
+//        new Deadlock().test();
+        new Runnable_VS_Callable().test();
     }
 }
