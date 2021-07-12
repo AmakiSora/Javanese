@@ -1,4 +1,4 @@
-import concurrent.CyclicBarrier_;
+import concurrent.Semaphore_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -43,6 +43,7 @@ public class JavaneseApplication {
 //        new Deadlock().test();
 //        new Runnable_VS_Callable().test();
 //        new CountDownLatch_().test();
-        new CyclicBarrier_().test();
+//        new CyclicBarrier_().test();
+        new Semaphore_().test();
     }
 }

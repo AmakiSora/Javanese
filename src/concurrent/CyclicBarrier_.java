@@ -14,7 +14,7 @@ public class CyclicBarrier_ {
     public void test(){
         Thread AllReady = new Thread(()->{
             System.out.println("所有选手准备完毕");
-            System.out.println("预备，跑！");
+            System.out.println("预备，跑！");//执行完此线程，其他线程才会继续
         });
 
         CyclicBarrier cyclicBarrier = new CyclicBarrier(RunnerNum,AllReady);
