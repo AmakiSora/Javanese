@@ -1,4 +1,4 @@
-import concurrent.Runnable_VS_Callable;
+import concurrent.CountDownLatch_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -41,6 +41,7 @@ public class JavaneseApplication {
 //        new Volatile_Visibility().test();
 //        new InstructionReordering().test();
 //        new Deadlock().test();
-        new Runnable_VS_Callable().test();
+//        new Runnable_VS_Callable().test();
+        new CountDownLatch_().test();
     }
 }
