@@ -1,4 +1,4 @@
-import concurrent.CountDownLatch_;
+import concurrent.CyclicBarrier_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -42,6 +42,7 @@ public class JavaneseApplication {
 //        new InstructionReordering().test();
 //        new Deadlock().test();
 //        new Runnable_VS_Callable().test();
-        new CountDownLatch_().test();
+//        new CountDownLatch_().test();
+        new CyclicBarrier_().test();
     }
 }

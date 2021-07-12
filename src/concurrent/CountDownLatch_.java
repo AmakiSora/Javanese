@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 减一计数器CountDownLatch
+ * 一个线程(或者多个)， 等待另外N个线程完成某个事情之后才能执行。
  */
 public class CountDownLatch_ {
     public void test() throws InterruptedException {
@@ -18,6 +19,6 @@ public class CountDownLatch_ {
         }
         countDownLatch.await();//等待
 //        countDownLatch.await(10, TimeUnit.SECONDS);//等待一段时间，如果未到0则继续执行
-        System.out.println("5个线程都执行完成");
+        System.out.println("5个子线程都执行完成,主线程继续执行");
     }
 }
