@@ -1,4 +1,4 @@
-import concurrent.Semaphore_;
+import concurrent.ReadWriteLock;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -44,6 +44,7 @@ public class JavaneseApplication {
 //        new Runnable_VS_Callable().test();
 //        new CountDownLatch_().test();
 //        new CyclicBarrier_().test();
-        new Semaphore_().test();
+//        new Semaphore_().test();
+        new ReadWriteLock().test();
     }
 }
