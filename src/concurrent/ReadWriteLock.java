@@ -9,6 +9,8 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * 读写锁ReadWriteLock
  * 写锁为独占锁
  * 读锁为共享锁
+ * 读锁不能升级为写锁
+ * 写锁能降级为读锁
  */
 public class ReadWriteLock {
     class Database{

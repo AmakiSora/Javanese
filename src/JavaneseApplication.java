@@ -1,4 +1,4 @@
-import concurrent.ReadWriteLock;
+import concurrent.ThreadPool;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -45,6 +45,7 @@ public class JavaneseApplication {
 //        new CountDownLatch_().test();
 //        new CyclicBarrier_().test();
 //        new Semaphore_().test();
-        new ReadWriteLock().test();
+//        new ReadWriteLock().test();
+        new ThreadPool().test();
     }
 }
