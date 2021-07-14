@@ -1,4 +1,4 @@
-import concurrent.CustomThreadPool;
+import concurrent.ForkJoinPool_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -47,6 +47,7 @@ public class JavaneseApplication {
 //        new Semaphore_().test();
 //        new ReadWriteLock().test();
 //        new ThreadPool().test();
-        new CustomThreadPool().test();
+//        new CustomThreadPool().test();
+        new ForkJoinPool_().test();
     }
 }
