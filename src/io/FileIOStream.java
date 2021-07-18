@@ -3,13 +3,13 @@ package io;
 import java.io.*;
 
 /**
- * IO流
+ * FileOutputStream和FileInputStream类的使用
  */
 public class FileIOStream {
-    private void writeToFile() throws IOException{//写入文件
+    private void writeToFile(String path) throws IOException{//写入文件
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream("D:\\cosmos\\test\\fos.txt");
+            fos = new FileOutputStream(path);
 //        fos = new FileOutputStream(new File("D:\\cosmos\\test\\fos.txt"));//另一种构造方式
             fos.write(97);//ASCII码写入
 
@@ -31,7 +31,7 @@ public class FileIOStream {
          */
 
             //构造函数中第二个参数append默认为false，即从头开始写入，如果为true，则在末尾开始写入
-            fos = new FileOutputStream("D:\\cosmos\\test\\fos.txt",true);
+            fos = new FileOutputStream(path,true);
             fos.write("COSMOS".getBytes());
         }catch (FileNotFoundException e){
             e.printStackTrace();
@@ -45,10 +45,10 @@ public class FileIOStream {
             }
         }
     }
-    private void readFromFile(){//读取文件
+    private void readFromFile(String path){//读取文件
         FileInputStream fis = null;
         try {
-            fis = new FileInputStream("D:\\cosmos\\test\\fis.txt");
+            fis = new FileInputStream(path);
             /*
                 从此输入流中读取一个字节的数据。 如果尚无可用输入，则此方法会阻塞。
                 返回值为当前字节的ASCII码，如果到达文件末尾，则为-1 。
@@ -79,7 +79,7 @@ public class FileIOStream {
         }
     }
     public void test() throws IOException {
-        writeToFile();
-        readFromFile();
+        writeToFile("D:\\cosmos\\test\\fos.txt");
+        readFromFile("D:\\cosmos\\test\\fis.txt");
     }
 }
