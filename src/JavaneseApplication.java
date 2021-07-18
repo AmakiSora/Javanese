@@ -1,4 +1,4 @@
-import io.File_;
+import io.FileIOStream;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -49,6 +49,7 @@ public class JavaneseApplication {
 //        new ThreadPool().test();
 //        new CustomThreadPool().test();
 //        new ForkJoinPool_().test();
-        new File_().test();
+//        new File_().test();
+        new FileIOStream().test();
     }
 }
