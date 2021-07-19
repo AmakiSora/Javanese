@@ -1,4 +1,4 @@
-import io.BufferedReaderWriter;
+import io.IOToReaderWriter;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -53,6 +53,7 @@ public class JavaneseApplication {
 //        new FileIOStream().test();
 //        new BufferedIOStream().test();
 //        new FileReaderWriter().test();
-        new BufferedReaderWriter().test();
+//        new BufferedReaderWriter().test();
+        new IOToReaderWriter().test();
     }
 }
