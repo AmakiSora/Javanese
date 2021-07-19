@@ -4,6 +4,7 @@ import java.io.*;
 
 /**
  * BufferedInputStream和BufferedOutputStream的使用
+ * 带缓冲区的字节流
  *
  * BufferedInputStream和BufferedOutputStream这两个类分别是FilterInputStream和FilterOutputStream的子类
  * 作为装饰器子类，使用它们可以防止每次读取/发送数据时进行实际的写操作，代表着使用缓冲区。

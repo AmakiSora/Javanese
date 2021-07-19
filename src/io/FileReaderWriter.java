@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
+ * FileReader和FileWriter的使用
  * 文件字符流，只能读写普通文本
  */
 public class FileReaderWriter {

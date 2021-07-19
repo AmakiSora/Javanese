@@ -4,6 +4,7 @@ import java.io.*;
 
 /**
  * FileOutputStream和FileInputStream类的使用
+ * 文件字节流
  */
 public class FileIOStream {
     private void writeToFile(String path) throws IOException{//写入文件
