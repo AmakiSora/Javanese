@@ -1,4 +1,4 @@
-import io.ObjectIOStream;
+import net.TCPConnection;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -57,6 +57,7 @@ public class JavaneseApplication {
 //        new IOToReaderWriter().test();
 //        new DataIOStream().test();
 //        new StandardOutput().test();
-        new ObjectIOStream().test();
+//        new ObjectIOStream().test();
+        new TCPConnection().test();
     }
 }
