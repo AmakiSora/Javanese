@@ -1,4 +1,4 @@
-import net.TCPConnection;
+import net.UDPNoConnection;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -58,6 +58,7 @@ public class JavaneseApplication {
 //        new DataIOStream().test();
 //        new StandardOutput().test();
 //        new ObjectIOStream().test();
-        new TCPConnection().test();
+//        new TCPConnection().test();
+        new UDPNoConnection().test();
     }
 }
