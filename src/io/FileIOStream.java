@@ -59,7 +59,7 @@ public class FileIOStream {
             System.out.println((char) fis.read());
 
             //读出所有数据(readAllBytes)
-            byte[] b = fis.readAllBytes();
+            byte[] b = fis.readAllBytes();//jdk8没有这个方法
             System.out.println(new String(b));
 
             //读出所有数据(循环)

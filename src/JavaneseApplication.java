@@ -1,4 +1,4 @@
-import net.UDPNoConnection;
+import concurrent.CacheLinePadding;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -59,6 +59,7 @@ public class JavaneseApplication {
 //        new StandardOutput().test();
 //        new ObjectIOStream().test();
 //        new TCPConnection().test();
-        new UDPNoConnection().test();
+//        new UDPNoConnection().test();
+        new CacheLinePadding().test();
     }
 }
