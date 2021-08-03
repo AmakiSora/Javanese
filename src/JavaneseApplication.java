@@ -1,4 +1,4 @@
-import net.MultiUserServer;
+import nio.Buffer;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -61,6 +61,7 @@ public class JavaneseApplication {
 //        new TCPConnection().test();
 //        new UDPNoConnection().test();
 //        new CacheLinePadding().test();
-        new MultiUserServer().test();
+//        new MultiUserServer().test();
+        new Buffer().test();
     }
 }
