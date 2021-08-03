@@ -1,4 +1,4 @@
-import concurrent.CacheLinePadding;
+import net.MultiUserServer;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -60,6 +60,7 @@ public class JavaneseApplication {
 //        new ObjectIOStream().test();
 //        new TCPConnection().test();
 //        new UDPNoConnection().test();
-        new CacheLinePadding().test();
+//        new CacheLinePadding().test();
+        new MultiUserServer().test();
     }
 }

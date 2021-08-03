@@ -10,6 +10,7 @@ import java.net.Socket;
 
 /**
  * 基于TCP的网络编程
+ * 一个服务端只能接受一个客户端
  */
 public class TCPConnection {
     public void test() throws InterruptedException {
