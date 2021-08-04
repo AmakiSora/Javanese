@@ -1,4 +1,4 @@
-import nio.Buffer;
+import nio.FileChannel_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -62,6 +62,7 @@ public class JavaneseApplication {
 //        new UDPNoConnection().test();
 //        new CacheLinePadding().test();
 //        new MultiUserServer().test();
-        new Buffer().test();
+//        new Buffer().test();
+        new FileChannel_().test();
     }
 }
