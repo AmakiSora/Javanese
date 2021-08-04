@@ -1,4 +1,4 @@
-import nio.SocketChannel_Block;
+import nio.SocketChannel_NonBlocking;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -66,6 +66,7 @@ public class JavaneseApplication {
 //        new FileChannel_().test();
 //        new Scatter_Gather().test();
 //        new Charset_().test();
-        new SocketChannel_Block().test();
+//        new SocketChannel_Block().test();
+        new SocketChannel_NonBlocking().test();
     }
 }
