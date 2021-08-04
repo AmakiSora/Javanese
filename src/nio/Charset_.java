@@ -1,6 +1,5 @@
 package nio;
 
-import javax.swing.text.html.parser.Entity;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.*;
