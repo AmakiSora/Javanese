@@ -1,4 +1,4 @@
-import nio.FileChannel_;
+import nio.Scatter_Gather;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -63,6 +63,7 @@ public class JavaneseApplication {
 //        new CacheLinePadding().test();
 //        new MultiUserServer().test();
 //        new Buffer().test();
-        new FileChannel_().test();
+//        new FileChannel_().test();
+        new Scatter_Gather().test();
     }
 }
