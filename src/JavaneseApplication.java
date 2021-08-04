@@ -1,4 +1,4 @@
-import nio.Scatter_Gather;
+import nio.Charset_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -64,6 +64,7 @@ public class JavaneseApplication {
 //        new MultiUserServer().test();
 //        new Buffer().test();
 //        new FileChannel_().test();
-        new Scatter_Gather().test();
+//        new Scatter_Gather().test();
+        new Charset_().test();
     }
 }
