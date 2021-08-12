@@ -1,4 +1,4 @@
-import nio.Pipe_;
+import reflection.Reflection_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception{
@@ -69,6 +69,7 @@ public class JavaneseApplication {
 //        new SocketChannel_Block().test();
 //        new SocketChannel_NonBlocking().test();
 //        new DatagramChannel_().test();
-        new Pipe_().test();
+//        new Pipe_().test();
+        new Reflection_().test();
     }
 }
