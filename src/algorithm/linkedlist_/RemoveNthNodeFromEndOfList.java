@@ -4,6 +4,9 @@ import datastructure.LinkedList_;
 
 /**
  * 删除链表的倒数第 n 个节点
+ * 例:
+ * 输入:      1 -> 2 -> 3 -> 4 -> 5
+ * 删倒数第二: 1 -> 2 -> 3 -> 5
  */
 public class RemoveNthNodeFromEndOfList {
     //计算出位置再删除
@@ -44,13 +47,10 @@ public class RemoveNthNodeFromEndOfList {
     }
     public void test(){
         LinkedList_ l1 = new LinkedList_(1,2,3,4,5);
-        System.out.print("输入：");
-        l1.show();
+        l1.show("输入：");
         l1 = new LinkedList_(computingMethod(l1.getHead(), 2));
-        System.out.print("计算：");
-        l1.show();
+        l1.show("计算：");
         l1 = new LinkedList_(intervalPointer(l1.getHead(), 2));
-        System.out.print("间隔：");
-        l1.show();
+        l1.show("间隔：");
     }
 }

@@ -2,6 +2,7 @@ package algorithm.others;
 
 /**
  * 二进制中1的个数
+ * 例: 1001 中1的个数为2
  */
 public class TheNumberOf1InBinarySystem {
     //n&(n-1) 位运算可以将 n 的位级表示中最低的那一位 1 设置为 0。不断将 1 设置为 0，直到 n 为 0。

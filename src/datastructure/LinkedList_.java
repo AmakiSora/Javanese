@@ -203,6 +203,20 @@ public class LinkedList_ {
         }
         System.out.println();
     }
+    public void show(String prefix){//遍历输出,增加前缀
+        if (head==null){
+            System.out.println("无链表");
+            return;
+        }
+        System.out.print(prefix);
+        Node n = head;
+        System.out.print(n.str);
+        while (n.next!=null){
+            n = n.next;
+            System.out.print( " -> " + n.str);
+        }
+        System.out.println();
+    }
     public void test(){//测试
         LinkedList_ l1 = new LinkedList_();
         LinkedList_ l2 = new LinkedList_();

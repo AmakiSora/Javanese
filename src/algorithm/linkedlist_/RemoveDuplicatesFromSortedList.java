@@ -4,6 +4,9 @@ import datastructure.LinkedList_;
 
 /**
  * 从有序链表中删除重复节点
+ * 例:
+ * 输入: 1 -> 1 -> 1 -> 2 -> 2 -> 3 -> 4 -> 5 -> 5
+ * 输出: 1 -> 2 -> 3 -> 4 -> 5
  */
 public class RemoveDuplicatesFromSortedList {
     //循环法
@@ -30,15 +33,12 @@ public class RemoveDuplicatesFromSortedList {
     }
     public void test(){
         LinkedList_ l1 = new LinkedList_(1,1,1,2,2,3,4,5,5);
-        System.out.print("输入： ");
-        l1.show();
+        l1.show("输入： ");
         LinkedList_ l2 = new LinkedList_(circulation(l1.getHead()));
-        System.out.print("循环： ");
-        l2.show();
+        l2.show("循环： ");
         l1 = new LinkedList_(1,1,1,2,2,3,4,5,5);
         l2 = new LinkedList_(recursion(l1.getHead()));
-        System.out.print("递归： ");
-        l2.show();
+        l2.show("递归： ");
 
     }
 }

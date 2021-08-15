@@ -4,6 +4,9 @@ import datastructure.LinkedList_;
 
 /**
  * 反转链表
+ * 例:
+ * 输入:    1 → 2 → 3 → 4 → 5
+ * 输出:    5 → 4 → 3 → 2 → 1
  */
 public class ReverseLinkedList {
     //递归法

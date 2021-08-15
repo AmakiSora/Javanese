@@ -4,6 +4,10 @@ import datastructure.LinkedList_;
 
 /**
  * 合并两个有序链表
+ * 例:
+ * A:    1 → 2 → 4
+ * B:    1 → 3 → 4
+ * 合并:  1 → 1 → 2 → 3 → 4 → 4
  */
 public class MergeTwoSortedLists {
     //归并法
@@ -38,19 +42,15 @@ public class MergeTwoSortedLists {
     }
     public void test(){
         LinkedList_ l1 = new LinkedList_(1,2,4);
-        System.out.print("输入l1: ");
-        l1.show();
+        l1.show("输入l1: ");
         LinkedList_ l2 = new LinkedList_(1,3,4);
-        System.out.print("输入l2: ");
-        l2.show();
-        System.out.print("归并法: ");
+        l2.show("输入l2: ");
         LinkedList_ l3 = new LinkedList_(mergingMethod(l1.getHead(), l2.getHead()));
-        l3.show();
+        l3.show("归并法: ");
         //执行后会破坏两个链表,需重新生成
         l1 = new LinkedList_(1,2,4);
         l2 = new LinkedList_(1,3,4);
-        System.out.print("递归法: ");
         LinkedList_ l4 = new LinkedList_(recursion(l1.getHead(),l2.getHead()));
-        l4.show();
+        l4.show("递归法: ");
     }
 }
