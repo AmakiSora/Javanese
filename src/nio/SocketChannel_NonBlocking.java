@@ -76,9 +76,7 @@ public class SocketChannel_NonBlocking {//非阻塞写法
         }
     }
     private void client(String data) {//客户端
-        SocketChannel socketChannel = null;
-        try {
-            socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 8888));
+        try (SocketChannel socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", 8888))){
             socketChannel.configureBlocking(false);//切换为非阻塞模式
             ByteBuffer buf = ByteBuffer.allocate(1024);
             buf.put(data.getBytes());
@@ -87,9 +85,6 @@ public class SocketChannel_NonBlocking {//非阻塞写法
             buf.clear();
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
-            try { if (socketChannel!=null) socketChannel.close(); }
-            catch (IOException e) { e.printStackTrace(); }
         }
     }
 }

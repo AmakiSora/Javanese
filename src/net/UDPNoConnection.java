@@ -15,37 +15,23 @@ public class UDPNoConnection {
         sender();
     }
     private void sender() {//发送端
-        DatagramSocket socket = null;
-        try {
-            socket = new DatagramSocket();
+        try (DatagramSocket socket = new DatagramSocket()){
             byte[] str = "发送端的消息！".getBytes();
             InetAddress ip = InetAddress.getLocalHost();
             DatagramPacket packet = new DatagramPacket(str,str.length,ip,8888);
             socket.send(packet);
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (socket != null){
-                try { socket.close(); }
-                catch (Exception e){ e.printStackTrace(); }
-            }
         }
     }
     private void receiver(){//接收端
-        DatagramSocket socket = null;
-        try {
-            socket = new DatagramSocket(8888);//指定端口号
+        try (DatagramSocket socket = new DatagramSocket(8888)){//指定端口号
             byte[] str = new byte[50];
             DatagramPacket packet = new DatagramPacket(str,str.length);
             socket.receive(packet);
             System.out.println(new String(packet.getData()));
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (socket != null){
-                try { socket.close(); }
-                catch (Exception e){ e.printStackTrace(); }
-            }
         }
     }
 }

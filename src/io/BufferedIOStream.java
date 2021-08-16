@@ -18,15 +18,11 @@ import java.io.*;
  */
 public class BufferedIOStream {
     private void bufferedCopyFile(File oldFile, File newFile) {//复制文件
-        InputStream inputStream = null;
-        BufferedInputStream bufferedInputStream = null;
-        OutputStream outputStream = null;
-        BufferedOutputStream bufferedOutputStream = null;
-        try {
-            inputStream = new FileInputStream(oldFile);
-            bufferedInputStream = new BufferedInputStream(inputStream);
-            outputStream = new FileOutputStream(newFile);
-            bufferedOutputStream = new BufferedOutputStream(outputStream);
+        try (InputStream inputStream = new FileInputStream(oldFile);
+             BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
+             OutputStream outputStream = new FileOutputStream(newFile);
+             BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
+        ){
             byte[] b = new byte[1024];   //代表一次最多读取1KB的内容
             int length = 0 ; //代表实际读取的字节数
             while((length = bufferedInputStream.read(b))!= -1){
@@ -37,26 +33,9 @@ public class BufferedIOStream {
             bufferedOutputStream.flush();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {//先关闭外层流，再关闭内层流,即先打开的后关闭，后打开的先关闭
-            if( bufferedOutputStream != null ){
-                try { bufferedOutputStream.close();}
-                catch (IOException e) { e.printStackTrace();}
-            }
-            if( bufferedInputStream != null){
-                try { bufferedInputStream.close();}
-                catch (IOException e) { e.printStackTrace();}
-            }
-            if( inputStream != null ){
-                try { inputStream.close();}
-                catch (IOException e) { e.printStackTrace();}
-            }
-            if ( outputStream != null ) {
-                try { outputStream.close();}
-                catch (IOException e) { e.printStackTrace();}
-            }
         }
     }
-    public void test() throws FileNotFoundException {
+    public void test() {
         File oldFile = new File("D:\\cosmos\\test\\bis.txt");
         File newFile = new File("D:\\cosmos\\test\\bos.txt");
         bufferedCopyFile(oldFile,newFile);

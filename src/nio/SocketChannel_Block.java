@@ -27,13 +27,11 @@ public class SocketChannel_Block {//阻塞写法
         client();
     }
     private void server() {//服务端
-        ServerSocketChannel serverSocketChannel = null;
-        FileChannel fileChannel = null;
-        SocketChannel socketChannel = null;
-        try {
-            serverSocketChannel = ServerSocketChannel.open();
-            fileChannel = FileChannel.open(Paths.get("D:\\cosmos\\test\\receive.txt"), StandardOpenOption.WRITE,StandardOpenOption.CREATE);
 
+        SocketChannel socketChannel = null;
+        try (ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
+             FileChannel fileChannel = FileChannel.open(Paths.get("D:\\cosmos\\test\\receive.txt"), StandardOpenOption.WRITE,StandardOpenOption.CREATE);
+             ){
             serverSocketChannel.bind(new InetSocketAddress(8888));//绑定连接
             socketChannel = serverSocketChannel.accept();//获取与客户端连接的通道
             ByteBuffer buf = ByteBuffer.allocate(1024);
@@ -46,10 +44,6 @@ public class SocketChannel_Block {//阻塞写法
             e.printStackTrace();
         } finally {
             try { if (socketChannel!=null) socketChannel.close(); }
-            catch (IOException e) { e.printStackTrace(); }
-            try { if (fileChannel!=null) fileChannel.close(); }
-            catch (IOException e) { e.printStackTrace(); }
-            try { if (serverSocketChannel!=null) serverSocketChannel.close(); }
             catch (IOException e) { e.printStackTrace(); }
         }
     }

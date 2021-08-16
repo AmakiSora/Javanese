@@ -7,8 +7,8 @@ import java.io.*;
  * 文件字节流
  */
 public class FileIOStream {
-    private void writeToFile(String path) throws IOException{//写入文件
-        FileOutputStream fos = null;
+    private void writeToFile(String path) {//写入文件
+        FileOutputStream fos = null;//这里不用隐式关闭流的方法是因为下面fos要重新new对象,而隐式关闭写在try里的是final属性
         try {
             fos = new FileOutputStream(path);
 //        fos = new FileOutputStream(new File("D:\\cosmos\\test\\fos.txt"));//另一种构造方式
@@ -32,11 +32,11 @@ public class FileIOStream {
          */
 
             //构造函数中第二个参数append默认为false，即从头开始写入，如果为true，则在末尾开始写入
-            fos = new FileOutputStream(path,true);
+            fos = new FileOutputStream(path,true);//由于new了新对象,所以采用显式关闭流的方法
             fos.write("COSMOS".getBytes());
-        }catch (FileNotFoundException e){
+        } catch (IOException e){
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 //IO流最后都需要释放资源,最好用try catch finally来保证释放
                 if (fos != null)
@@ -79,7 +79,7 @@ public class FileIOStream {
             }
         }
     }
-    public void test() throws IOException {
+    public void test() {
         writeToFile("D:\\cosmos\\test\\fos.txt");
         readFromFile("D:\\cosmos\\test\\fis.txt");
     }

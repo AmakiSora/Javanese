@@ -1,4 +1,4 @@
-import algorithm.linkedlist_.ReverseLinkedListAddition;
+import algorithm.linkedlist_.IsLoopLinkedList;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception {
@@ -71,6 +71,7 @@ public class JavaneseApplication {
 //        new DatagramChannel_().test();
 //        new Pipe_().test();
 //        new Reflection_().test();
-        new ReverseLinkedListAddition().test();
+//        new ReverseLinkedListAddition().test();
+        new IsLoopLinkedList().test();
     }
 }

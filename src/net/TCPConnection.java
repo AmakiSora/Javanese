@@ -19,6 +19,7 @@ public class TCPConnection {
         client();
     }
     private void server(){//服务端
+        //此文件保留旧的关闭流方式(显式关闭),其他流操作都采用jdk1.7提供的关闭方式,即try(在这里new,后面会自动关){}catch(){}
         ServerSocket ss = null;
         Socket socket = null;
         InputStream is = null;

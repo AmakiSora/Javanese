@@ -29,9 +29,7 @@ public class DatagramChannel_ {//UDP的通道写法
         }
     }
     private void send(String data){//发送端
-        DatagramChannel datagramChannel = null;
-        try {
-            datagramChannel = DatagramChannel.open();
+        try (DatagramChannel datagramChannel = DatagramChannel.open();){
             datagramChannel.configureBlocking(false);
             ByteBuffer buf = ByteBuffer.allocate(1024);
             buf.put(data.getBytes());
@@ -40,9 +38,6 @@ public class DatagramChannel_ {//UDP的通道写法
             buf.clear();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try { if (datagramChannel!=null) datagramChannel.close(); }
-            catch (IOException e) { e.printStackTrace(); }
         }
     }
     private void receive(){//接收端

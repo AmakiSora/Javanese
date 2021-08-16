@@ -39,25 +39,26 @@ public class ObjectIOStream {
         }
     }
 
-    private void objectOutputStream(String path) throws IOException {
+    private void objectOutputStream(String path) {
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(path))){
+            Person person = new Person("张三", 18);
+            oos.writeObject(person);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(path));
-        Person person = new Person("张三", 18);
-        oos.writeObject(person);
-
-        oos.close();//记得关闭流
     }
 
-    private void objectInputStream(String path) throws IOException, ClassNotFoundException {
-
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path));
-        Object obj = ois.readObject();//会抛出class文件找不到的异常
-        System.out.println(obj.toString());
-
-        ois.close();//记得关闭流
+    private void objectInputStream(String path) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path))){
+            Object obj = ois.readObject();//会抛出class文件找不到的异常
+            System.out.println(obj.toString());
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void test() throws IOException, ClassNotFoundException {
+    public void test() {
         String path = "D:\\cosmos\\test\\obj";
         objectOutputStream(path);
         objectInputStream(path);
