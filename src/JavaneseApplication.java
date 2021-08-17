@@ -1,4 +1,4 @@
-import algorithm.linkedlist_.IsLoopLinkedList;
+import algorithm.string.LongestStringWithoutDuplicateCharacters;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception {
@@ -72,6 +72,7 @@ public class JavaneseApplication {
 //        new Pipe_().test();
 //        new Reflection_().test();
 //        new ReverseLinkedListAddition().test();
-        new IsLoopLinkedList().test();
+//        new IsLoopLinkedList().test();
+        new LongestStringWithoutDuplicateCharacters().test();
     }
 }
