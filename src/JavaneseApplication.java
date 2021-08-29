@@ -1,4 +1,4 @@
-import algorithm.string.LongestStringWithoutDuplicateCharacters;
+import other.RegularExpression;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception {
@@ -73,6 +73,7 @@ public class JavaneseApplication {
 //        new Reflection_().test();
 //        new ReverseLinkedListAddition().test();
 //        new IsLoopLinkedList().test();
-        new LongestStringWithoutDuplicateCharacters().test();
+//        new LongestStringWithoutDuplicateCharacters().test();
+        new RegularExpression().test();
     }
 }
