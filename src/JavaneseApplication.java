@@ -1,4 +1,4 @@
-import other.RegularExpression;
+import algorithm.string.KnuthMorrisPratt;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception {
@@ -74,6 +74,7 @@ public class JavaneseApplication {
 //        new ReverseLinkedListAddition().test();
 //        new IsLoopLinkedList().test();
 //        new LongestStringWithoutDuplicateCharacters().test();
-        new RegularExpression().test();
+//        new RegularExpression().test();
+        new KnuthMorrisPratt().test();
     }
 }

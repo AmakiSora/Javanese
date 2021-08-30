@@ -30,9 +30,6 @@ public class RegularExpression {
         }
         return content;
     }
-    private void getNum(){
-
-    }
     private void getInfo(String regStr,String content){
         //创建模式对象(即正则表达式对象)
         Pattern pattern = Pattern.compile(regStr);
@@ -59,6 +56,9 @@ public class RegularExpression {
 //            System.out.println(matcher.group(2));//取出第二组分组的字符串
 //            System.out.println(matcher.group("strName1"));//通过组名取出分组
             //matcher.group(0)根据group[0]和group[1]记录的位置,从content中截取字符串返回
+//            String newStr =matcher.replaceAll("233");//替换所找到的字符串
+//            String newStr =matcher.replaceAll("$1");//$分组号,表示反向引用上面的分组,一般利用(.)//1+找到重复的在用$1替换
+//            String newStr = Pattern.compile("(.)\\1+").matcher(content).replaceAll("$1");//去重语句
         }
     }
     public void test(){
@@ -66,9 +66,11 @@ public class RegularExpression {
         getInfo("[a-zA-Z]+",content);
         getInfo("(\\d)(\\d)",content);//有()表示分组,一个()表示一组
 //        getInfo("(?<strName1>\\d)(?<strName2>\\d)",content);//命名分组
-        //非捕获分组,ABC(?:EE|GG|NM) 表示匹配ABCEE,ABCGG和ABCNM       以下非捕获分组不能用matcher.group()来获取分组
-        //非捕获分组,ABC(?=66|77) 表示只匹配ABC66和ABC77
-        //非捕获分组,ABC(?!66|77) 表示除了ABC66和ABC77,其他ABC开头的都匹配
+
+        //其实String类也支持正则表达式
+        String r = content.replaceAll("[0-9]", "233");//返回替换后的字符串
+        boolean b = content.matches("[a-z]");//如果匹配到就返回true
+        String[] s = content.split("\\d|#");//字符串分割也支持正则表达式
         /*
             元字符
                 转义字符\\
@@ -102,10 +104,37 @@ public class RegularExpression {
                     \\B  表示目标字符串的非边界                    例如XYZ\\B表示XYZ后不能有空格或结尾,6XYZ9
         */
         /*
+            分组:
+                我们可以用圆括号组成一个比较复杂的匹配模式,那么一个圆括号的部分我们可以看作是一个子表达式或一个分组
+                有()表示分组,一个()表示一组
+                例如:  顺序分组  (\\d)(\\d) 表示将两个数字字符分为两组,组名为1,2
+                      命名分组  (?<strName1>\\d)(?<strName2>\\d) 表示将两个数字字符分为两组,组名为strName1,strName2
+            捕获:
+                把正则表达式中子表达式或分组匹配的内容,保存到内存中以数字编号或显式命名的组里,方便后面引用
+                从左向右,以分组的左括号为标志,第一个出现的分组的组号为1，第二个为2,以此类推,组0代表的是整个正则式
+            非捕获分组:    (非捕获分组不能用matcher.group()来获取分组)
+                ABC(?:EE|GG|NM) 表示匹配ABCEE,ABCGG和ABCNM
+                ABC(?=66|77)    表示只匹配ABC66和ABC77
+                ABC(?!66|77)    表示除了ABC66和ABC77,其他ABC开头的都匹配
+            反向引用:
+                圆括号的内容被捕获后,可以在这个括号后被使用,从而写出一个比较实用的匹配模式,这个我们称为反向引用
+                这种引用既可以是在正则表达式内部,也可以是在正则表达式外部,内部反向引用\\分组号,外部反向引用$分组号
+                例如: (\\d)\\1           表示匹配两个连续相同的数字,11,22,33
+                     (\\d)\\1{4}        表示匹配5个连续相同的数字,99999,88888
+                     (\\d)(\\d)\\2\\1   表示匹配个位与千位相同,十位和百位相同的数字,3223,1991
+                     (.)\\1+            表示找到重复的字符,XXX,啊啊啊
+
+         */
+        /*
             正则表达式例子:
-                (?!)abc         表示abc都不区分大小写
-                a(?!)bc         表示bc不区分大小写
-                a((?!)b)c       表示只有b不区分大小写
+                (?!)abc                             表示abc都不区分大小写
+                a(?!)bc                             表示bc不区分大小写
+                a((?!)b)c                           表示只有b不区分大小写
+                常用:
+                [0-9]+                              表示匹配所有数字
+                [a-zA-Z]+                           表示匹配所有英文单词
+                [\\w-]+@([a-zA-Z]+\\.)+[a-zA-Z]+    表示匹配邮箱地址,abc@qq.com
+                ^[-+]?([1-9]\\d*|0)+(\\.\\d+)?$     表示匹配整数或小数,233,+1,-2,-0.03,+1.1
          */
     }
 }
