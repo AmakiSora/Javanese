@@ -1,4 +1,4 @@
-import algorithm.string.KnuthMorrisPratt;
+import java8.Lambda;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception {
@@ -75,6 +75,7 @@ public class JavaneseApplication {
 //        new IsLoopLinkedList().test();
 //        new LongestStringWithoutDuplicateCharacters().test();
 //        new RegularExpression().test();
-        new KnuthMorrisPratt().test();
+//        new KnuthMorrisPratt().test();
+        new Lambda().test();
     }
 }
