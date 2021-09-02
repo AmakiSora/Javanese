@@ -20,7 +20,19 @@ import java.util.function.Consumer;
  *          4 两个或两个以上参数,多条语句,可以有返回值
  *              Comparator<Integer> comparator = (o1, o2) -> Integer.compare(o1, o2);
  * 方法引用
- *      方法引用提供了非常有用的语法，可以直接引用已有Java类或对象（实例）的方法或构造器。与lambda联合使用，方法引用可以使语言的构造更紧凑简洁，减少冗余代码。
+ *      方法引用提供了非常有用的语法,可以直接引用已有Java类或对象(实例)的方法或构造器
+ *      与lambda联合使用,方法引用可以使语言的构造更紧凑简洁,减少冗余代码
+ *      使用情景:当要传递给lambda的方法体,已经有实现的方法时使用
+ *      语法格式:
+ *          1 对象::实例方法名
+ *          2 类::静态方法名
+ *          3 类::实例方法名
+ * 构造器引用
+ *      和方法引用类似,函数式接口的抽象方法的形参列表和构造器的列表一致即可使用
+ *      抽象方法的返回值类型即为构造器所属的类的类型
+ *      例:  Object::new
+ * 数组引用
+ *      例:  Object[]::new
  */
 public class Lambda {
     @SuppressWarnings("all")
@@ -74,8 +86,8 @@ public class Lambda {
         Comparator<Integer> comparator = Integer::compare;
         System.out.println(comparator.compare(1, 2));
 
-        //消费数据
-        Consumer consumer = System.out::println;
+        //消费型接口
+        Consumer<String> consumer = System.out::println;
         consumer.accept("MethodReferences,consumer");
     }
 
