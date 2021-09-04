@@ -1,4 +1,4 @@
-import java8.FunctionalInterface_;
+import java8.StreamAPI;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception {
@@ -77,6 +77,7 @@ public class JavaneseApplication {
 //        new RegularExpression().test();
 //        new KnuthMorrisPratt().test();
 //        new Lambda().test();
-        new FunctionalInterface_().test();
+//        new FunctionalInterface_().test();
+        new StreamAPI().test();
     }
 }
