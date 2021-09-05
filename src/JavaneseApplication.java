@@ -1,4 +1,4 @@
-import java8.StreamAPI;
+import java8.Optional_;
 
 public class JavaneseApplication {
     public static void main(String[] args) throws Exception {
@@ -78,6 +78,7 @@ public class JavaneseApplication {
 //        new KnuthMorrisPratt().test();
 //        new Lambda().test();
 //        new FunctionalInterface_().test();
-        new StreamAPI().test();
+//        new StreamAPI().test();
+        new Optional_().test();
     }
 }
