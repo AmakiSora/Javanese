@@ -1,5 +1,5 @@
 
-import java_.java9.PrivateInterfaceImpl;
+import java_.java9.DiamondOperator;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -82,6 +82,7 @@ public class JavaneseApplication {
 //        new FunctionalInterface_().test();
 //        new StreamAPI().test();
 //        new Optional_().test();
-        new PrivateInterfaceImpl().test();
+//        new PrivateInterfaceImpl().test();
+        new DiamondOperator().test();
     }
 }
