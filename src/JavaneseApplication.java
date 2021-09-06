@@ -1,5 +1,5 @@
 
-import java_.java9.DiamondOperator;
+import java_.java9.TryWithResources;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -83,6 +83,7 @@ public class JavaneseApplication {
 //        new StreamAPI().test();
 //        new Optional_().test();
 //        new PrivateInterfaceImpl().test();
-        new DiamondOperator().test();
+//        new DiamondOperator().test();
+        new TryWithResources().test();
     }
 }
