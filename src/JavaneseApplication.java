@@ -1,6 +1,8 @@
-import java8.Optional_;
+
+import java_.java9.PrivateInterfaceImpl;
 
 public class JavaneseApplication {
+    @SuppressWarnings("all")//关闭警告
     public static void main(String[] args) throws Exception {
 //        new FibonacciSequence().test();
 //        new TheNumberOf1InBinarySystem().test();
@@ -79,6 +81,7 @@ public class JavaneseApplication {
 //        new Lambda().test();
 //        new FunctionalInterface_().test();
 //        new StreamAPI().test();
-        new Optional_().test();
+//        new Optional_().test();
+        new PrivateInterfaceImpl().test();
     }
 }
