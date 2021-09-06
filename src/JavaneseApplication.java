@@ -1,5 +1,5 @@
 
-import java_.java9.TryWithResources;
+import java_.java9.UnmodifiableCollections;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -84,6 +84,7 @@ public class JavaneseApplication {
 //        new Optional_().test();
 //        new PrivateInterfaceImpl().test();
 //        new DiamondOperator().test();
-        new TryWithResources().test();
+//        new TryWithResources().test();
+        new UnmodifiableCollections().test();
     }
 }
