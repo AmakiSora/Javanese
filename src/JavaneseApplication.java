@@ -1,6 +1,5 @@
 
-import java_.java9.UnmodifiableCollections;
-
+import java_.java9.IOTransferTo;
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
     public static void main(String[] args) throws Exception {
@@ -85,6 +84,7 @@ public class JavaneseApplication {
 //        new PrivateInterfaceImpl().test();
 //        new DiamondOperator().test();
 //        new TryWithResources().test();
-        new UnmodifiableCollections().test();
+//        new UnmodifiableCollections().test();
+        new IOTransferTo().test();
     }
 }
