@@ -38,6 +38,8 @@ public class StreamAPI {
 
         //通过Stream的of()创建
         Stream<Integer> Stream5 = Stream.of(1, 2, 3, 4, 5);
+        Stream<Integer> Stream6 = Stream.of(null, null);//of里可以有null
+//        Stream<Integer> Stream7 = Stream.of(null);//但不能只有一个null,只有一个null会抛出空指针异常
 
         //创建无限流
         //迭代  public static<T> Stream<T> iterate(final T seed, final UnaryOperator<T> f)
