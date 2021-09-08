@@ -1,5 +1,5 @@
 
-import java_.java9.StreamAPI_9;
+import java_.java10.LocalVariableTypeInference;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -87,6 +87,7 @@ public class JavaneseApplication {
 //        new TryWithResources().test();
 //        new UnmodifiableCollections().test();
 //        new IOTransferTo().test();
-        new StreamAPI_9().test();
+//        new StreamAPI_9().test();
+        new LocalVariableTypeInference().test();
     }
 }
