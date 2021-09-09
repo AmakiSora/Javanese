@@ -1,5 +1,5 @@
 
-import java_.java10.CollectionsCopyOf;
+import java_.java11.Optional_11;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -89,6 +89,8 @@ public class JavaneseApplication {
 //        new IOTransferTo().test();
 //        new StreamAPI_9().test();
 //        new LocalVariableTypeInference().test();
-        new CollectionsCopyOf().test();
+//        new CollectionsCopyOf().test();
+//        new String_11().test();
+        new Optional_11().test();
     }
 }

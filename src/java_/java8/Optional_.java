@@ -42,7 +42,7 @@ public class Optional_ {
         c.orElseGet(()-> 233);//如果c不为null则返回c,如果为null,则执行Supplier函数
         System.out.println("-----------------");
 
-        //T orElseThrow(Supplier<? extends X> exceptionSupplier)
+        //T orElseThrow(Supplier<? extends X> exceptionSupplier) java10(以后有空再分类)
         System.out.println(a.orElseThrow());//如果a不为null则返回a,如果为null,则抛出由Supplier函数提供的异常
         System.out.println("-----------------");
         
