@@ -1,5 +1,5 @@
 
-import java_.java10.LocalVariableTypeInference;
+import java_.java10.CollectionsCopyOf;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -88,6 +88,7 @@ public class JavaneseApplication {
 //        new UnmodifiableCollections().test();
 //        new IOTransferTo().test();
 //        new StreamAPI_9().test();
-        new LocalVariableTypeInference().test();
+//        new LocalVariableTypeInference().test();
+        new CollectionsCopyOf().test();
     }
 }
