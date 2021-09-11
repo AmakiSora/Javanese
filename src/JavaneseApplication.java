@@ -1,5 +1,4 @@
-
-import java_.java11.Optional_11;
+import java_.java11.HttpClientApi;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -91,6 +90,7 @@ public class JavaneseApplication {
 //        new LocalVariableTypeInference().test();
 //        new CollectionsCopyOf().test();
 //        new String_11().test();
-        new Optional_11().test();
+//        new Optional_11().test();
+        new HttpClientApi().test();
     }
 }
