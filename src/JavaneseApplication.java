@@ -1,4 +1,4 @@
-import java_.java12.Switch_12;
+import java_.java12.Files_12;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -92,6 +92,7 @@ public class JavaneseApplication {
 //        new String_11().test();
 //        new Optional_11().test();
 //        new HttpClientApi().test();
-        new Switch_12().test();
+//        new Switch_12().test();
+        new Files_12().test();
     }
 }
