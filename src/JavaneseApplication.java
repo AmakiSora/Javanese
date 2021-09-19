@@ -1,5 +1,5 @@
-import java_.java12.Files_12;
-import java_.java13.Switch_13;
+
+import other.IntegerCache;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -95,6 +95,7 @@ public class JavaneseApplication {
 //        new HttpClientApi().test();
 //        new Switch_12().test();
 //        new Files_12().test();
-        new Switch_13().test();
+//        new Switch_13().test();
+        new IntegerCache().test();
     }
 }

@@ -21,6 +21,7 @@ public class Switch_13 {
         }
         System.out.println(i);
     }
+    /*
     private void java13Version() {
         String x = "3";
         int i = switch (x) {
@@ -32,9 +33,10 @@ public class Switch_13 {
         };
         System.out.println(i);
     }
+    */
     public void test() {
         oldJavaVersion();
-        java13Version();
+//        java13Version();
     }
 
     enum ABC {
