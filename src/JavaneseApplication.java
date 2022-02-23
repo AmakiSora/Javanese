@@ -1,5 +1,4 @@
-
-import other.IntegerCache;
+import java_.concurrent.Threadlocal_;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -96,6 +95,7 @@ public class JavaneseApplication {
 //        new Switch_12().test();
 //        new Files_12().test();
 //        new Switch_13().test();
-        new IntegerCache().test();
+//        new IntegerCache().test();
+        new Threadlocal_().test();
     }
 }
