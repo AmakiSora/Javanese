@@ -1,4 +1,4 @@
-import java_.concurrent.InheritableThreadLocal_;
+import java_.java8.Time_;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -97,6 +97,7 @@ public class JavaneseApplication {
 //        new Switch_13().test();
 //        new IntegerCache().test();
 //        new Threadlocal_().test();
-        new InheritableThreadLocal_().test();
+//        new InheritableThreadLocal_().test();
+        new Time_().test();
     }
 }
