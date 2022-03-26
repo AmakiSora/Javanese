@@ -1,4 +1,7 @@
 import java_.java8.Time_;
+import java_.queue_.LinkedListQueue_;
+
+import java.util.Queue;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -98,6 +101,7 @@ public class JavaneseApplication {
 //        new IntegerCache().test();
 //        new Threadlocal_().test();
 //        new InheritableThreadLocal_().test();
-        new Time_().test();
+//        new Time_().test();
+        new LinkedListQueue_().test();
     }
 }
