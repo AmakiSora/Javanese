@@ -1,4 +1,4 @@
-import java_.queue_.ArrayDeque_;
+import java_.queue_.PriorityQueue_;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -100,6 +100,7 @@ public class JavaneseApplication {
 //        new InheritableThreadLocal_().test();
 //        new Time_().test();
 //        new LinkedListQueue_().test();
-        new ArrayDeque_().test();
+//        new ArrayDeque_().test();
+        new PriorityQueue_().test();
     }
 }
