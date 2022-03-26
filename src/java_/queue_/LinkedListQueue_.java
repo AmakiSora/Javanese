@@ -6,6 +6,7 @@ import java.util.Queue;
 
 /**
  * 链表队列
+ * 没有实现的阻塞接口
  */
 public class LinkedListQueue_ {
     public void test(){
@@ -36,6 +37,20 @@ public class LinkedListQueue_ {
         //addAll 将集合元素加入到队列
         List<String> list = List.of("1", "2", "3");
         queue.addAll(list);
+        System.out.println(queue);
 
+        //element 检索但不删除此队列的头部,如果此队列为空,则抛出异常
+        String element = queue.element();
+        System.out.println(element);
+        System.out.println(queue);
+
+        //peek 检索但不删除此队列的头部,如果此队列为空,则返回null
+        String peek = queue.peek();
+        System.out.println(peek);
+        System.out.println(queue);
+
+        //clear 清空队列
+        queue.clear();
+        System.out.println(queue);
     }
 }
