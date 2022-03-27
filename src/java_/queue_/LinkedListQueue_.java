@@ -7,6 +7,7 @@ import java.util.Queue;
 /**
  * 链表队列
  * 没有实现的阻塞接口
+ * 不是线程安全的
  */
 public class LinkedListQueue_ {
     public void test(){

@@ -1,3 +1,4 @@
+import java_.queue_.ConcurrentLinkedQueue_;
 import java_.queue_.PriorityQueue_;
 
 public class JavaneseApplication {
@@ -101,6 +102,7 @@ public class JavaneseApplication {
 //        new Time_().test();
 //        new LinkedListQueue_().test();
 //        new ArrayDeque_().test();
-        new PriorityQueue_().test();
+//        new PriorityQueue_().test();
+        new ConcurrentLinkedQueue_().test();
     }
 }
