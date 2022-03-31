@@ -1,3 +1,4 @@
+import java_.queue_.LinkedTransferQueue_;
 import java_.queue_.SynchronousQueue_;
 
 public class JavaneseApplication {
@@ -105,6 +106,7 @@ public class JavaneseApplication {
 //        new ConcurrentLinkedQueue_().test();
 //        new ArrayBlockingQueue_().test();
 //        new LinkedBlockingQueue_().test();
-        new SynchronousQueue_().test();
+//        new SynchronousQueue_().test();
+        new LinkedTransferQueue_().test();
     }
 }
