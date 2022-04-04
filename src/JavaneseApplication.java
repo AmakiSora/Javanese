@@ -1,5 +1,4 @@
-import java_.queue_.LinkedTransferQueue_;
-import java_.queue_.SynchronousQueue_;
+import java_.queue_.DelayQueue_;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -107,6 +106,7 @@ public class JavaneseApplication {
 //        new ArrayBlockingQueue_().test();
 //        new LinkedBlockingQueue_().test();
 //        new SynchronousQueue_().test();
-        new LinkedTransferQueue_().test();
+//        new LinkedTransferQueue_().test();
+        new DelayQueue_().test();
     }
 }
