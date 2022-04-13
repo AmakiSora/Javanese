@@ -1,5 +1,9 @@
 package java_.queue_;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.*;
 
 /**
@@ -11,8 +15,8 @@ import java.util.concurrent.*;
 public class DelayQueue_ {
     public void test() {
         DelayQueue<DIYDelayed> queue = new DelayQueue<>();
+        putThread(queue);
         takeThreads(queue);
-
     }
 
     /**
@@ -20,28 +24,48 @@ public class DelayQueue_ {
      */
     static class DIYDelayed implements Delayed {
 
+        long time = System.currentTimeMillis();
+
+        public DIYDelayed(long time) {
+            this.time = time;
+        }
+
         //getDelay定义了剩余到期时间
         @Override
         public long getDelay(TimeUnit unit) {
-            return 0;
+            return unit.convert(time - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
         }
 
         //compareTo方法定义了元素排序规则
         @Override
         public int compareTo(Delayed o) {
-            return 0;
+            if (this.getDelay(TimeUnit.MILLISECONDS) < o.getDelay(TimeUnit.MILLISECONDS))
+                return -1;
+            else if (this.getDelay(TimeUnit.MILLISECONDS) > o.getDelay(TimeUnit.MILLISECONDS))
+                return 1;
+            else
+                return 0;
+        }
+
+        @Override
+        public String toString() {
+            return LocalDateTime.ofInstant(Instant.ofEpochMilli(this.time), ZoneId.systemDefault()).format(DateTimeFormatter.ofPattern("HH:mm:ss"));
         }
     }
 
     //消费线程池
     private void takeThreads(DelayQueue<DIYDelayed> queue) {
-        ExecutorService threadPool = Executors.newFixedThreadPool(5);
+        ExecutorService threadPool = Executors.newFixedThreadPool(3);
         try {
-            int num = 100;
-            for (int i = 0; i < num; i++) {
+            while (true) {
                 threadPool.execute(() -> {
-                    System.out.println(Thread.currentThread().getName() + "等待执行工作");
-
+                    try {
+                        System.out.println(Thread.currentThread().getName() + "等待执行工作");
+                        DIYDelayed take = queue.take();
+                        System.out.println(Thread.currentThread().getName() + "执行了 " + take + " 的任务");
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 });
             }
         } catch (Exception e) {
@@ -57,6 +81,11 @@ public class DelayQueue_ {
             try {
                 while (true) {
                     Thread.sleep(3000);//3秒生成一次
+                    long now = LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+                    long time = now + ThreadLocalRandom.current().nextInt(10) * 1000;
+                    System.out.println("生成元素执行时间:" + LocalDateTime.ofInstant(Instant.ofEpochMilli(time), ZoneId.systemDefault()).format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+                    queue.put(new DIYDelayed(time));
+                    System.out.println("现有任务:" + queue);
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();

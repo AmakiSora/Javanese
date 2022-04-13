@@ -1,4 +1,5 @@
 import java_.queue_.DelayQueue_;
+import other.Generics;
 
 public class JavaneseApplication {
     @SuppressWarnings("all")//关闭警告
@@ -107,6 +108,7 @@ public class JavaneseApplication {
 //        new LinkedBlockingQueue_().test();
 //        new SynchronousQueue_().test();
 //        new LinkedTransferQueue_().test();
-        new DelayQueue_().test();
+//        new DelayQueue_().test();
+        new Generics().test();
     }
 }
